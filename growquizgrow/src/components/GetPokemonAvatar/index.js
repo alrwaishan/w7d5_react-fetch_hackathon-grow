@@ -3,12 +3,16 @@ import useRandomizer from "../hooks/useRandomizer"
 
 function GetPokemonAvatar(){
     const [pokemon, setpokemon] = useState({});
-    const [id, setId] = useState();
+    const [id, setId] = useState(randomNumber());
 
     
-    const [number, randomize] = useRandomizer();
-        // randomize();
-        setId(number);
+    // const [number, randomize] = useRandomizer();
+    //     // randomize();
+    //     setId(number);
+    function randomNumber(min = 1, max =  151){
+        return (Math.floor(Math.random()*max)+min);
+    };
+
     useEffect(()=>{
         async function fetchPokemon(){
             const result = await fetch(`${process.env.REACT_APP_POKEMONAPI_URL}${id}`);
@@ -16,7 +20,7 @@ function GetPokemonAvatar(){
             console.log(data)
             setpokemon(data);
         }
-       
+        setId(randomNumber(1, 151))
         console.log(id);
         fetchPokemon();
     },[]);

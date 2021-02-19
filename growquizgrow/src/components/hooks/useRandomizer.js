@@ -6,7 +6,7 @@ function useRandomizer(min = 1, max = 151)
 
     function randomize()
     {
-        setNumber(Math.floor(Math.random())*(max - min)+min);
+        setNumber(Math.floor(Math.random()*max)+min)
     }
 
     return [number, randomize];
