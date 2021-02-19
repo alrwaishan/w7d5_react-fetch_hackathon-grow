@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import '../App/App.css';
+
 function Button ({arrayIncorrect, itemCorrect, handleCorrectClick, handleIncorrectClick}){
     const [isDisabled, setDisabled] = useState(false);
     return(

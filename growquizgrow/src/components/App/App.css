@@ -1,3 +1,35 @@
 .App {
   text-align: center;
 }
+ 
+#mainbody {
+  background: #DE3163;
+  background: -moz-linear-gradient(left, #DE3163 0%, #FFFFFF 50%, #ef98b1 100%);
+  background: -webkit-linear-gradient(left, #DE3163 0%, #FFFFFF 50%, #ef98b1 100%);
+  background: linear-gradient(to right, #DE3163 0%, #FFFFFF 50%, #ef98b1 100%);
+}
+.h1 {
+   text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c, 2px 2px 2px rgba(206,89,55,0.5), 2px 2px 2px rgba(206,89,55,0.5);
+}
+.button {
+  display: block;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  background-color: #7C7F70;
+  color: white;
+}
+#submit {
+  background: #de3163  no-repeat scroll 50% 96%;
+  
+  background-color: #ff4F50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
