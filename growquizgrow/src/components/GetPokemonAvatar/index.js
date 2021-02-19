@@ -1,16 +1,23 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import useRandomizer from "../hooks/useRandomizer"
 
 function GetPokemonAvatar(){
     const [pokemon, setpokemon] = useState({});
-    const [id, setId] = useState(40);
+    const [id, setId] = useState();
+
+    
+    const [number, randomize] = useRandomizer(1,151);
 
     useEffect(()=>{
         async function fetchPokemon(){
             const result = await fetch(`${process.env.REACT_APP_POKEMONAPI_URL}${id}`);
             const data = await result.json();
-          
+            console.log(data)
             setpokemon(data);
         }
+       
+        setId(randomize());
+        console.log(id);
         fetchPokemon();
     },[id]);
 
