@@ -19,7 +19,10 @@ useEffect(() => {
 }, []);
 
 
-
+function handleQuizLevel() {
+    if(counter >= 7)
+    {setQuizLevel = `https://opentdb.com/api.php?amount=10&category=15&difficulty=medium&type=multiple`;}
+}
 
 
 function handleCorrectAnswer(){
