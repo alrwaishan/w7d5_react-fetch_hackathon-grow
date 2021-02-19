@@ -1,5 +1,6 @@
 import QuizDisplay from '../QuizDisplay';
 import './App.css';
+import GetPokemonAvatar from '../GetPokemonAvatar'
 
 function App() {
   return (
