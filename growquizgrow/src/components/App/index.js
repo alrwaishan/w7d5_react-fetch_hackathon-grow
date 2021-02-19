@@ -1,4 +1,5 @@
 import './App.css';
+import GetPokemonAvatar from '../GetPokemonAvatar'
 
 function App() {
   return (
