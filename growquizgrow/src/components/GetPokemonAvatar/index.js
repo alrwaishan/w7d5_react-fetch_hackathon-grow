@@ -6,8 +6,9 @@ function GetPokemonAvatar(){
     const [id, setId] = useState();
 
     
-    const [number, randomize] = useRandomizer(1,151);
-
+    const [number, randomize] = useRandomizer();
+        // randomize();
+        setId(number);
     useEffect(()=>{
         async function fetchPokemon(){
             const result = await fetch(`${process.env.REACT_APP_POKEMONAPI_URL}${id}`);
@@ -16,10 +17,9 @@ function GetPokemonAvatar(){
             setpokemon(data);
         }
        
-        setId(randomize());
         console.log(id);
         fetchPokemon();
-    },[id]);
+    },[]);
 
     // // async function fetchPokemon(){
     // //     const result = await fetch(process.env.REACT_APP_POKEMONAPI_URL+{id});
