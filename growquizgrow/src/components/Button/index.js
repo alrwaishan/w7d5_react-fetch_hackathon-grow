@@ -1,15 +1,12 @@
 import React, {useState} from "react";
-
 function Button ({arrayIncorrect, itemCorrect, handleCorrectClick, handleIncorrectClick}){
     const [isDisabled, setDisabled] = useState(false);
-
     return(
     <div>
         <button disabled={isDisabled} className="correctButton" onClick={ () => {
                 setDisabled(true);
                 handleCorrectClick();
             }}>{itemCorrect}</button>
-            
         {arrayIncorrect.map ((item, index) => 
         (
             <div key={index}>
